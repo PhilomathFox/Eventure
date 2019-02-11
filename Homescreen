@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+
+</style>
+<div class="tab">
+	<button class="tablink">Event</button>
+	<button class="tablink">Lessons</button>
+</div>
+<body></body>
+</html>
