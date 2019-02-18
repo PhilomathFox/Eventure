@@ -1,12 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body>
-<style>
+<meta charset="utf-8">
+<link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+<link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+<link src="C:\Users\Corbin Kelly\Desktop\eventure\ionicons.designerpack">
+<script src="lib/onsen/js/angular/angular.js"></script>
+<script src="lib/onsen/js/onsenui.js"></script>
+<script>
+    ons.bootstrap();
+    ons.ready(function () {
+        // Add another Onsen UI element
+        var content = document.getElementById("my-content");
+        content.innerHTML = "<ons-button>Another Button</ons-button>";
+        ons.compile(content);
+    });
+</script>
 
-</style>
-<div class="tab">
-	<button class="tablink">Event</button>
-	<button class="tablink">Lessons</button>
-</div>
-<body></body>
+<body>
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+            <ons-page>
+                <ons-list>
+                    <ons-list-item onclick="fn.load('home.html')" tappable>
+                        Home
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('viewevents.html')" tappable>
+                        View Events
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('lessonslearned.html')" tappable>
+                        Lessons Learned
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('eventcreator.html')" tappable>
+                        Event Creator
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('inputlesson.html')" tappable>
+                        Input Lesson
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('notifcations.html')" tappable>
+                        Notifcations
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('settings.html')" tappable>
+                        Settings
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+    </ons-splitter>
+
+    <template id="home.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Main
+                </div>
+            </ons-toolbar>
+            </ons-list-item>
+        </ons-page>
+    </template>
+
+    <template id="viewevents.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    View Events
+                </div>
+            </ons-toolbar>
+        </ons-page>
+    </template>
+
+    <template id="eventcreator.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Event Creator
+                </div>
+            </ons-toolbar>
+        </ons-page>
+    </template>
+
+    <template id="lessonslearned.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Lessons Learned
+                </div>
+            </ons-toolbar>
+        </ons-page>
+
+        <template id="inputlesson.html">
+            <ons-page>
+                <ons-toolbar>
+                    <div class="left">
+                        <ons-toolbar-button onclick="fn.open()">
+                            <ons-icon icon="md-menu"></ons-icon>
+                        </ons-toolbar-button>
+                    </div>
+                    <div class="center">
+                        Input Lesson
+                    </div>
+                </ons-toolbar>
+            </ons-page>
+
+            <template id="notifcations">
+                <ons-page>
+                    <ons-toolbar>
+                        <div class="left">
+                            <ons-toolbar-button onclick="fn.open()">
+                                <ons-icon icon="md-menu"></ons-icon>
+                            </ons-toolbar-button>
+                        </div>
+                        <div class="center">
+                            Notifcations
+                        </div>
+                    </ons-toolbar>
+                </ons-page>
+
+                <template id="settings.html">
+                    <ons-page>
+                        <ons-toolbar>
+                            <div class="left">
+                                <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                </ons-toolbar-button>
+                            </div>
+                            <div class="center">
+                                Settings
+                            </div>
+                        </ons-toolbar>
+                    </ons-page>
+                </template>
+                <script src="app.js"></script>
+                </div>
+</body>
+
 </html>
