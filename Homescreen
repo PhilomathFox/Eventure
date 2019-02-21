@@ -1,157 +1,44 @@
-<!doctype html>
-<html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="lib/onsen/css/onsenui.css">
-<link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
-<link src="C:\Users\Corbin Kelly\Desktop\eventure\ionicons.designerpack">
-<script src="lib/onsen/js/angular/angular.js"></script>
-<script src="lib/onsen/js/onsenui.js"></script>
-<script>
-    ons.bootstrap();
-    ons.ready(function () {
-        // Add another Onsen UI element
-        var content = document.getElementById("my-content");
-        content.innerHTML = "<ons-button>Another Button</ons-button>";
-        ons.compile(content);
-    });
-</script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
 <body>
-    <ons-splitter>
-        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
-            <ons-page>
-                <ons-list>
-                    <ons-list-item onclick="fn.load('home.html')" tappable>
-                        Home
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('viewevents.html')" tappable>
-                        View Events
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('lessonslearned.html')" tappable>
-                        Lessons Learned
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('eventcreator.html')" tappable>
-                        Event Creator
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('inputlesson.html')" tappable>
-                        Input Lesson
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('notifcations.html')" tappable>
-                        Notifcations
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('settings.html')" tappable>
-                        Settings
-                    </ons-list-item>
-                </ons-list>
-            </ons-page>
-        </ons-splitter-side>
-        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
-    </ons-splitter>
+   <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Eventure</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Lessons Learned</a></li>
+        <li><a href="#">Notifcations</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+<div class="container-fluid">
+  <h1>My First Bootstrap Page</h1>      
+  <p>This part is inside a .container-fluid class.</p> 
+  <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>           
+</div>
 
-    <template id="home.html">
-        <ons-page>
-            <ons-toolbar>
-                <div class="left">
-                    <ons-toolbar-button onclick="fn.open()">
-                        <ons-icon icon="md-menu"></ons-icon>
-                    </ons-toolbar-button>
-                </div>
-                <div class="center">
-                    Main
-                </div>
-            </ons-toolbar>
-            </ons-list-item>
-        </ons-page>
-    </template>
-
-    <template id="viewevents.html">
-        <ons-page>
-            <ons-toolbar>
-                <div class="left">
-                    <ons-toolbar-button onclick="fn.open()">
-                        <ons-icon icon="md-menu"></ons-icon>
-                    </ons-toolbar-button>
-                </div>
-                <div class="center">
-                    View Events
-                </div>
-            </ons-toolbar>
-        </ons-page>
-    </template>
-
-    <template id="eventcreator.html">
-        <ons-page>
-            <ons-toolbar>
-                <div class="left">
-                    <ons-toolbar-button onclick="fn.open()">
-                        <ons-icon icon="md-menu"></ons-icon>
-                    </ons-toolbar-button>
-                </div>
-                <div class="center">
-                    Event Creator
-                </div>
-            </ons-toolbar>
-        </ons-page>
-    </template>
-
-    <template id="lessonslearned.html">
-        <ons-page>
-            <ons-toolbar>
-                <div class="left">
-                    <ons-toolbar-button onclick="fn.open()">
-                        <ons-icon icon="md-menu"></ons-icon>
-                    </ons-toolbar-button>
-                </div>
-                <div class="center">
-                    Lessons Learned
-                </div>
-            </ons-toolbar>
-        </ons-page>
-
-        <template id="inputlesson.html">
-            <ons-page>
-                <ons-toolbar>
-                    <div class="left">
-                        <ons-toolbar-button onclick="fn.open()">
-                            <ons-icon icon="md-menu"></ons-icon>
-                        </ons-toolbar-button>
-                    </div>
-                    <div class="center">
-                        Input Lesson
-                    </div>
-                </ons-toolbar>
-            </ons-page>
-
-            <template id="notifcations">
-                <ons-page>
-                    <ons-toolbar>
-                        <div class="left">
-                            <ons-toolbar-button onclick="fn.open()">
-                                <ons-icon icon="md-menu"></ons-icon>
-                            </ons-toolbar-button>
-                        </div>
-                        <div class="center">
-                            Notifcations
-                        </div>
-                    </ons-toolbar>
-                </ons-page>
-
-                <template id="settings.html">
-                    <ons-page>
-                        <ons-toolbar>
-                            <div class="left">
-                                <ons-toolbar-button onclick="fn.open()">
-                                    <ons-icon icon="md-menu"></ons-icon>
-                                </ons-toolbar-button>
-                            </div>
-                            <div class="center">
-                                Settings
-                            </div>
-                        </ons-toolbar>
-                    </ons-page>
-                </template>
-                <script src="app.js"></script>
-                </div>
 </body>
-
 </html>
